@@ -1,0 +1,30 @@
+.skill-card{
+  position: relative;
+  overflow: hidden;
+}
+
+/* soft corner pattern */
+
+.skill-card::before{
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 140px;
+  height: 140px;
+  background: #f3f3f3;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+/* .skill-card::after{
+  content: "";
+  position: absolute;
+  bottom: 40px;
+  right: -60px;
+  width: 140px;
+  height: 140px;
+  background: #f3f3f3;
+  border-radius: 50%;
+  opacity: 0.35;
+} */
