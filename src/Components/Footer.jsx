@@ -59,6 +59,7 @@ export default function Footer() {
 
             <a
               href="https://github.com/Ankita-3004"
+              target="_blank"
               className="p-2 border border-gray-700 rounded-lg hover:border-orange-400 hover:text-orange-400 transition"
             >
               <Github size={18} />
@@ -66,13 +67,14 @@ export default function Footer() {
 
             <a
               href="https://www.linkedin.com/in/ankita-dhall-ba41a52a0/"
+              target="_blank"
               className="p-2 border border-gray-700 rounded-lg hover:border-orange-400 hover:text-orange-400 transition"
             >
               <Linkedin size={18} />
             </a>
 
             <a
-              href="mailto:ankitadhall2001@gmail.com"
+              href="https://mail.google.com/mail/?view=cm&to=ankitadhall2001@gmail.com"
               className="p-2 border border-gray-700 rounded-lg hover:border-orange-400 hover:text-orange-400 transition"
             >
               <Mail size={18} />

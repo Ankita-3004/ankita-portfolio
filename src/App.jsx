@@ -1,4 +1,5 @@
 import { useState,useEffect } from "react"
+import { Toaster } from "react-hot-toast";
 import Navbar from "./Components/Navbar"
 import Hero from "./Components/Hero"
 import About from "./Components/AboutSection/About"
@@ -23,6 +24,20 @@ return(
 
 <>
 {loading && <Loader/>}
+<Toaster position="top-center"
+ toastOptions={{
+          style: {
+            background: "#f97316",
+            color: "#ffffff",
+          },
+          success: {
+            iconTheme: {
+              primary: "#ffffff",
+              secondary: "#f97316",
+            },
+          },
+        }}
+ />
 <Navbar/>
 <Hero/>
 <About/>

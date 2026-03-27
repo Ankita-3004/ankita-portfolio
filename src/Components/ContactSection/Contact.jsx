@@ -1,3 +1,7 @@
+import emailjs from "@emailjs/browser";
+import { useRef, useState } from "react";
+import toast from "react-hot-toast";
+
 import { Mail, MapPin, Github, Linkedin, Mail as MailIcon } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -21,6 +25,33 @@ const item = {
 };
 
 export default function Contact() {
+    const form = useRef();
+  const [loading, setLoading] = useState(false);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    emailjs.sendForm(
+      "service_lriz5pk",
+      "template_by69f7p",
+      form.current,
+      "9NZUAa5pI--_cT0Yx"
+    )
+    .then(
+      () => {
+        toast.success("Message sent successfully 🎉");
+        form.current.reset();
+        setLoading(false);
+      },
+      (error) => {
+       toast.error("Failed to send ❌");
+        console.log(error.text);
+        setLoading(false);
+      }
+    );
+  };
+
   return (
     <motion.section
       className="py-16 md:py-24 bg-[#f5efe7]"
@@ -55,39 +86,50 @@ export default function Contact() {
           {/* LEFT - FORM */}
           <motion.div
             variants={container}
-            className="space-y-4 sm:space-y-5"
+            className="space-y-5 sm:space-y-6"
           >
+            {/* FORM START */}
+  <form ref={form} onSubmit={sendEmail}>
 
-            <motion.input
-              variants={item}
-              type="text"
-              placeholder="Your Name"
-              className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm sm:text-base bg-white focus:ring-2 focus:ring-orange-400 outline-none"
-            />
+    <motion.input
+      variants={item}
+      type="text"
+      name="user_name"
+      placeholder="Your Name"
+      className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm sm:text-base bg-white focus:ring-2 focus:ring-orange-400 outline-none"
+      required
+    />
 
-            <motion.input
-              variants={item}
-              type="email"
-              placeholder="Email Address"
-              className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm sm:text-base bg-white focus:ring-2 focus:ring-orange-400 outline-none"
-            />
+    <motion.input
+      variants={item}
+      type="email"
+      name="user_email"
+      placeholder="Email Address"
+      className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm sm:text-base bg-white focus:ring-2 focus:ring-orange-400 outline-none"
+      required
+    />
 
-            <motion.textarea
-              variants={item}
-              rows="5"
-              placeholder="Tell me about your project..."
-              className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm sm:text-base bg-white focus:ring-2 focus:ring-orange-400 outline-none"
-            />
+    <motion.textarea
+      variants={item}
+      name="message"
+      rows="5"
+      placeholder="Tell me about your project..."
+      className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm sm:text-base bg-white focus:ring-2 focus:ring-orange-400 outline-none"
+      required
+    />
 
-            {/* Button */}
-            <motion.button
-              variants={item}
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.97 }}
-              className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white text-sm sm:text-base font-medium py-3 rounded-xl shadow-lg hover:shadow-xl transition"
-            >
-              Send Message →
-            </motion.button>
+    <motion.button
+      type="submit"
+      variants={item}
+      whileHover={{ scale: 1.03 }}
+      whileTap={{ scale: 0.97 }}
+      className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white py-3 rounded-xl"
+    >
+      Send Message →
+    </motion.button>
+
+  </form>
+  {/* FORM END */}
 
           </motion.div>
 
@@ -132,26 +174,31 @@ export default function Contact() {
 
               <div className="flex flex-wrap gap-3">
 
-                <motion.div
+                <motion.a
+                  href="https://github.com/Ankita-3004"
                   whileHover={{ scale: 1.1 }}
+                  target="_blank"
                   className="p-3 bg-white rounded-xl shadow hover:shadow-md cursor-pointer"
                 >
                   <Github size={18}/>
-                </motion.div>
+                </motion.a>
 
-                <motion.div
+                <motion.a
+                  href="https://www.linkedin.com/in/ankita-dhall-ba41a52a0/"
                   whileHover={{ scale: 1.1 }}
+                  target="_blank"
                   className="p-3 bg-white rounded-xl shadow hover:shadow-md cursor-pointer"
                 >
                   <Linkedin size={18}/>
-                </motion.div>
+                </motion.a>
 
-                <motion.div
+                <motion.a
+                  href="mailto:ankitadhall2001@gmail.com"
                   whileHover={{ scale: 1.1 }}
                   className="p-3 bg-white rounded-xl shadow hover:shadow-md cursor-pointer"
                 >
                   <MailIcon size={18}/>
-                </motion.div>
+                </motion.a>
 
               </div>
 

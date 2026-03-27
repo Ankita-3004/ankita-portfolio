@@ -3,28 +3,28 @@ import { Github, ExternalLink } from "lucide-react"
 export default function Projects() {
 
 const projects = [
-{
-title: "Analytics Dashboard",
-desc: "Real-time analytics dashboard with charts, reports and team collaboration features.",
-image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
-tech: ["React", "Node.js", "MongoDB"],
-github: "#",
-live: "#"
-},
+// {
+// title: "Analytics Dashboard",
+// desc: "Real-time analytics dashboard with charts, reports and team collaboration features.",
+// image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+// tech: ["React", "Node.js", "MongoDB"],
+// // github: "#",
+// live: "#"
+// },
 {
 title: "Task Management App",
 desc: "A productivity task manager with drag and drop tasks, priorities and project tracking.",
 image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b",
 tech: ["React", "Express", "MongoDB"],
-github: "#",
+// github: "#",
 live: "https://taskji.com/"
 },
 {
 title: "E-Commerce Platform",
 desc: "Full-stack ecommerce platform with payments, inventory management and analytics.",
 image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d",
-tech: ["React", "Redux", "Stripe"],
-github: "#",
+tech: ["React", "Redux", "Express"],
+// github: "#",
 live: "#"
 }
 ]
@@ -100,16 +100,17 @@ className="text-xs px-3 py-1 bg-orange-100 text-orange-600 rounded-full"
 
 <div className="flex gap-4 mt-5">
 
-<a
+{/* <a
 href={project.github}
 className="flex items-center gap-2 text-sm text-gray-700 hover:text-orange-500"
 >
 <Github size={16}/>
 Code
-</a>
+</a> */}
 
 <a
 href={project.live}
+target="_blank"
 className="flex items-center gap-2 text-sm text-gray-700 hover:text-orange-500"
 >
 <ExternalLink size={16}/>

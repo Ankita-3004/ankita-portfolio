@@ -43,7 +43,7 @@ I build responsive and modern web applications using clean code and intuitive de
 </p>
 
 <a
-  href="/ankita_dhall-cv.pdf"
+  href="/ankita-dhall-cv.pdf"
   download
   className="inline-block bg-orange-400 text-black px-7 py-3 rounded-full font-semibold hover:bg-orange-300 transition"
 >
