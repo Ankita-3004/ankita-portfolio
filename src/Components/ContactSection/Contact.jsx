@@ -118,7 +118,7 @@ export default function Contact() {
       required
     />
 
-    <motion.button
+    {/* <motion.button
       type="submit"
       variants={item}
       whileHover={{ scale: 1.03 }}
@@ -126,7 +126,21 @@ export default function Contact() {
       className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white py-3 rounded-xl"
     >
       Send Message →
-    </motion.button>
+    </motion.button> */}
+    <motion.button
+  type="submit"
+  disabled={loading}   // ✅ prevents multiple clicks
+  variants={item}
+  whileHover={{ scale: loading ? 1 : 1.03 }}
+  whileTap={{ scale: loading ? 1 : 0.97 }}
+  className={`w-full py-3 rounded-xl text-white transition 
+    ${loading 
+      ? "bg-orange-400 cursor-not-allowed" 
+      : "bg-gradient-to-r from-orange-500 to-orange-600"
+    }`}
+>
+  {loading ? "Sending..." : "Send Message →"}
+</motion.button>
 
   </form>
   {/* FORM END */}
