@@ -20,12 +20,12 @@ tech: ["React", "Express", "MongoDB"],
 live: "https://taskji.com/"
 },
 {
-title: "E-Commerce Platform",
-desc: "Full-stack ecommerce platform with payments, inventory management and analytics.",
+title: "WebMasters – Business Website",
+desc: "A modern and responsive business website with clean UI, smooth navigation, and mobile-friendly design.",
 image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d",
-tech: ["React", "Redux", "Express"],
+tech: ["React", "Tailwind CSS", "JavaScript"],
 // github: "#",
-live: "#"
+live: "https://webmasters-nine.vercel.app/"
 }
 ]
 
