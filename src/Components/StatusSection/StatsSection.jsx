@@ -6,7 +6,7 @@ const CountUp = CountUpModule.default;
 import './statusSection.css'
 export default function StatsSection() {
 
-  console.log(CountUp);
+  // console.log(CountUp);
  
   return (
     <section className="py-16 bg-gradient-to-r from-[#1f1f1f] via-[#1a1a1a] to-[#141414] grid-bg">
@@ -38,7 +38,7 @@ export default function StatsSection() {
         </div>
 
        <a
-  href="/ankita-dhall-cv.pdf"
+  href="/ankita-cv2.pdf"
   download
   className="inline-block mt-8 bg-orange-400 text-black px-8 py-3 rounded-full font-semibold hover:bg-orange-300 transition"
 >
