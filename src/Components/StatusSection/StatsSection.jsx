@@ -38,7 +38,7 @@ export default function StatsSection() {
         </div>
 
        <a
-  href="/ankita-cv2.pdf"
+  href="/ankita-cv3.pdf"
   download
   className="inline-block mt-8 bg-orange-400 text-black px-8 py-3 rounded-full font-semibold hover:bg-orange-300 transition"
 >

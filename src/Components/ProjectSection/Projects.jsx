@@ -25,7 +25,7 @@ desc: "A modern and responsive business website with clean UI, smooth navigation
 image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d",
 tech: ["React", "Tailwind CSS", "JavaScript"],
 // github: "#",
-live: "https://webmasters-nine.vercel.app/"
+live: "https://webmasterslearning-two.vercel.app/"
 }
 ]
 
